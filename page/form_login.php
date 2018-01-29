@@ -32,7 +32,7 @@ FUNCTIES:
 	
 	}else{
 	?>
-	<form method="post" action="?page=login">
+	<form style=" padding: 4px;" method="post" action="?page=login">
 	<table>
 	<tr><td>Emailadres:</td><td> <input name="emailadres" type="text"  size="15" ></td></tr>
 	<tr><td>Wachtwoord: </td><td><input name="wachtwoord" type="password" size="15" maxlength="20"></td></tr>
