@@ -45,16 +45,17 @@ FUNCTIES:
               <a class="nav-link" href="?page=home">Home
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="?page=over">Over</a>
-            </li>
-
-            <li class="nav-item">
-              <a class="nav-link" href="?page=contact">Contact</a>
-            </li>
-
+            
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_register">Registeren</a>
+            </li>
+			
+			<li class="nav-item">
+              <a class="nav-link" href="?page=form_product">Product toevoegen</a>
+            </li>
+			
+			<li class="nav-item">
+              <a class="nav-link" href="?page=bestelling">Bestelling overzicht</a>
             </li>
 			
 			
