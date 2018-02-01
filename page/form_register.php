@@ -17,7 +17,7 @@ FUNCTIES:
 <div class="col-lg-9">
 	<div class="card card-outline-secondary my-4">
 				<div class="card-header">
-				  Contact Pagina
+				 Account aanmaken
 				</div>
 				<div class="card-body">
 				 
@@ -27,13 +27,6 @@ FUNCTIES:
 		<legend>Persoonlijke informatie: </legend>
 		<table>
 			<tr><td>Naam:*</td><td>			<input name="naam" type="text" size="40" maxlength="20" required></td></tr>
-			<tr><td>Tussenvoegsel:</td><td><input name="tv" type="text" size="40" maxlength="5" ></td></tr>
-			<tr><td>Achternaam:*</td><td>	<input name="achternaam" type="text" size="40" maxlength="20" required></td></tr>
-			<tr><td>Postcode*</td><td>		<input name="postcode" type="text" size="40" placeholder="9999AA" maxlength="6" required></td></tr>
-			<tr><td>Woonplaats:*</td><td>	<input name="woonplaats" type="text" size="40" maxlength="25" required></td></tr>
-			<tr><td>Straat:*</td><td>		<input name="straat" type="text" size="40" maxlength="25" required></td></tr>
-			<tr><td>Huisnummer:*</td><td>	<input name="huisnummer" type="number" size="40" maxlength="6" required></td></tr>
-			<tr><td>Toevoeging:</td><td>	<input name="toevoeging" type="text" size="40" maxlength="3" ></td></tr>
 		</table>
 	</fieldset>	
 	<fieldset>
