@@ -33,8 +33,6 @@ if (!empty($_POST)){
 		while($row = mysqli_fetch_assoc($result)) {
 		echo "Je bent nu ingelogd als: ". $row['Naam'];
 		$_SESSION["naam"] = $row['Naam'];
-		$_SESSION["tussenvoegsel"] = $row['tussenvoegsel'] ;
-		$_SESSION["achternaam"] = $row['achternaam'];
 		$_SESSION["admin"] = $row['admin'];
 		
 		header('Location:?page=home');
