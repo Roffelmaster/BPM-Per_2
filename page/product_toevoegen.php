@@ -16,6 +16,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
        	$productnaam = mysqli_real_escape_string($db, $_POST['naam']);
 		$omschrijving = mysqli_real_escape_string($db, $_POST['omschrijving']);
 		$prijs = mysqli_real_escape_string($db, $_POST['prijs']);
+		$leverancier = mysqli_real_escape_string($db, $_POST['leverancier']);
 
       	$query1 = "SELECT * FROM producten WHERE naam ='$productnaam';";
 		$result1 = mysqli_query($db, $query1) or die ("FOUT: " . mysqli_error());
@@ -31,8 +32,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
     } 
        else 
           { 
-		$query = ("INSERT INTO producten (naam, omschrijving, prijs)
-		VALUES('$productnaam','$omschrijving','$prijs')") or die (mysqli_error());
+		$query = ("INSERT INTO producten (idproducten, naam, omschrijving, prijs)
+		VALUES('','$productnaam','$omschrijving','$prijs',)") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
 		echo("Product is toegevoegd!");
 		
