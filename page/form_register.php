@@ -7,13 +7,7 @@ FUNCTIES:
 
 -->
 
-<?php 
 
-	if(isset($_SESSION['naam'])){
-	echo "Je hebt al een account en je bent ingelogd als: ". $_SESSION["naam"];
-	}else{ 
-	
-	?>
 <div class="col-lg-9">
 	<div class="card card-outline-secondary my-4">
 				<div class="card-header">
@@ -47,7 +41,3 @@ FUNCTIES:
 				</div>
 	</div>
 </div>	
-<?php 
-}
-
-?>
