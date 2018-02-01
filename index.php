@@ -79,7 +79,7 @@ FUNCTIES:
     <!-- Page Content -->
     <div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<div style="margin-left: -60px; margin-right: 30px;"class="col-lg-3">
 			<?php include 'page/form_login.php' ?>
 			  <br><br>
 			  
