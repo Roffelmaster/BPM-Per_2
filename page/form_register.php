@@ -10,7 +10,7 @@ FUNCTIES:
 <?php 
 
 	if(isset($_SESSION['naam'])){
-	echo "Je hebt al een account en je bent ingelogd als: ". $_SESSION["naam"]." ". $_SESSION["tussenvoegsel"]. " ". $_SESSION["achternaam"] ;
+	echo "Je hebt al een account en je bent ingelogd als: ". $_SESSION["naam"];
 	}else{ 
 	
 	?>

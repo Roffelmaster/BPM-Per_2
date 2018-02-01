@@ -11,7 +11,7 @@ FUNCTIES:
 
 
 	<?php
-	session_start(); 
+	
 	if(isset($_SESSION["emailadres"])){
 	echo "Je bent ingelogd als: ". $_SESSION["naam"];
 	echo "<br><br><a class='btn btn-success' href='?page=uitloggen'>Uitloggen</a><br><br>";

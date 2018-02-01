@@ -45,7 +45,11 @@ FUNCTIES:
               <a class="nav-link" href="?page=home">Home
               </a>
             </li>
-            
+            <?php 
+			session_start();
+			if(isset($_SESSION['naam'])){
+			
+			?> 
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_register">Registeren</a>
             </li>
@@ -59,7 +63,10 @@ FUNCTIES:
             </li>
 			
 			
-			
+			<?php 
+			}else{
+			}
+			?>
 		
 
 			
