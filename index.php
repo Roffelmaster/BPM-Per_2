@@ -45,9 +45,13 @@ FUNCTIES:
               <a class="nav-link" href="?page=home">Home
               </a>
             </li>
-            
+            <?php 
+			session_start();
+			if(isset($_SESSION['naam'])){
+			
+			?> 
 			<li class="nav-item">
-              <a class="nav-link" href="?page=form_register">Registeren</a>
+              <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
             </li>
 			
 			<li class="nav-item">
@@ -59,7 +63,10 @@ FUNCTIES:
             </li>
 			
 			
-			
+			<?php 
+			}else{
+			}
+			?>
 		
 
 			
@@ -72,7 +79,7 @@ FUNCTIES:
     <!-- Page Content -->
     <div class="container">
 		<div class="row">
-			<div class="col-lg-3">
+			<div style="margin-left: -60px; margin-right: 30px;"class="col-lg-3">
 			<?php include 'page/form_login.php' ?>
 			  <br><br>
 			  

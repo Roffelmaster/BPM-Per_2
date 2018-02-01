@@ -13,20 +13,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
   { 
 	
 		$error_msg = "";
-		$productid = mysqli_real_escape_string($db, $_POST['idproducten']);
        	$productnaam = mysqli_real_escape_string($db, $_POST['naam']);
-		$afbeelding = mysqli_real_escape_string($db, $_POST['afbeelding']);
 		$omschrijving = mysqli_real_escape_string($db, $_POST['omschrijving']);
-		$specificatie = mysqli_real_escape_string($db, $_POST['specificaties']);
-		$prijs = mysqli_real_escape_string($db,$_POST['prijs']);
-		$hoeveelheid = mysqli_real_escape_string($db, $_POST['hoeveelheid']);
-		
-		
-       	
- 
-       
-	
-      	
+		$prijs = mysqli_real_escape_string($db, $_POST['prijs']);
+		$leverancier = mysqli_real_escape_string($db, $_POST['leverancier']);
+
       	$query1 = "SELECT * FROM producten WHERE naam ='$productnaam';";
 		$result1 = mysqli_query($db, $query1) or die ("FOUT: " . mysqli_error());
 		if (mysqli_num_rows($result1) > 0) {
@@ -41,8 +32,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
     } 
        else 
           { 
-		$query = ("INSERT INTO producten (idproducten, naam, afbeelding, omschrijving, specificaties, prijs, hoeveelheid, catogorie_idcatogorie, bestelling_idbestelling)
-		VALUES('$productid','$productnaam','$afbeelding','$omschrijving','$specificatie', '$prijs','$hoeveelheid', '1', '1')") or die (mysqli_error());
+		$query = ("INSERT INTO producten (idproducten, naam, omschrijving, prijs)
+		VALUES('','$productnaam','$omschrijving','$prijs',)") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
 		echo("Product is toegevoegd!");
 		
