@@ -31,6 +31,12 @@ FUNCTIES:
 			<tr><td>Productnaam:</td><td>			<input name="naam" type="text" size="40" maxlength="20" ></td></tr>
 			<tr><td>Omschrijving:</td><td>	<input name="omschrijving" type="text" size="40" maxlength="20" </td></tr>
 			<tr><td>Prijs</td><td>	<input name="prijs" type="text" size="40" maxlength="25" ></td></tr>
+			<tr><td>Leverancier</td><td>
+			<select>
+			<option value="leverancier1">Leverancier 1</option>
+			<option value="leverancier2">Leverancier 2</option>
+			<option value="leverancier3">Leverancier 3</option>
+			</select></td>
 		</table>
 	</fieldset>
 
