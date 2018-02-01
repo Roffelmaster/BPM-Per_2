@@ -51,7 +51,7 @@ FUNCTIES:
 			
 			?> 
 			<li class="nav-item">
-              <a class="nav-link" href="?page=form_register">Registeren</a>
+              <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
             </li>
 			
 			<li class="nav-item">
