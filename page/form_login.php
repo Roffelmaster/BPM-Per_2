@@ -16,20 +16,6 @@ FUNCTIES:
 	echo "Je bent ingelogd als: ". $_SESSION["naam"];
 	echo "<br><br><a class='btn btn-success' href='?page=uitloggen'>Uitloggen</a><br><br>";
 	
-		if($_SESSION["admin"] == 1){
-		
-		?>
-		<h4> Admin menu </h4>
-            <a class="nav-link" href="?page=form_product_aanpassen">Product aanpassen</a>
-            <a class="nav-link" href="?page=form_product_verwijderen">Product verwijderen</a>
-            <a class="nav-link" href="?page=form_product">Product Toevoegen</a>
-            
-		
-		<?php
-		}else{
-		
-		}
-	
 	}else{
 	?>
 	<form method="post" action="?page=login">
