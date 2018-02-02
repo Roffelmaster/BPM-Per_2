@@ -41,13 +41,14 @@ tr:nth-child(even) {
 </head>
 <body>
 
+
+
 <table>
   <tr>
     <th>ID</th>
     <th>Naam</th>
-    <th>Omschrijving</th>
-	<th>Prijs</th>
 	<th>Hoeveelheid</th>
+	<th>Product ID</th>
   </tr>
   
   <?php
@@ -57,8 +58,8 @@ while($row = mysqli_fetch_assoc($result)){
   <tr>
     <td><?php echo $row['idmagazijn'];?></td>
 	<td><?php echo $row['naam'];?></td>
-	<td><?php echo $row['Prijs'];?></td>
 	<td><?php echo $row['hoeveelheid'];?></td>
+	<td><?php echo $row['producten_idproducten'];?></td>
 	
 </tr>
 
