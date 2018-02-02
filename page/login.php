@@ -34,6 +34,7 @@ if (!empty($_POST)){
 		echo "Je bent nu ingelogd als: ". $row['Naam'];
 		$_SESSION["naam"] = $row['naam'];
 		$_SESSION["functie"] = $row['functies_idfunctie'];
+		$_SESSION["idgebruikers"] = $row['idgebruikers'];
 		
 		header('Location:?page=home');
 	}

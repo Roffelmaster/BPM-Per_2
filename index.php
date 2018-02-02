@@ -59,7 +59,7 @@ FUNCTIES:
             </li>
 			
 			<li class="nav-item">
-              <a class="nav-link" href="?page=bestelling">Bestelling overzicht</a>
+              <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
             </li>
 			
 			

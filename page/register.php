@@ -14,16 +14,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
 	
 		$error_msg = "";
        	$naam = mysqli_real_escape_string($db, $_POST['naam']);
-		$tussenvoegsel = mysqli_real_escape_string($db, $_POST['tv']);
-		$achternaam = mysqli_real_escape_string($db, $_POST['achternaam']);
 		$email = mysqli_real_escape_string($db, $_POST['emailadres']);
 		$wachtwoord = mysqli_real_escape_string($db,$_POST['wachtwoord']);
-		$postcode = mysqli_real_escape_string($db, $_POST['postcode']);
-		$woonplaats = mysqli_real_escape_string($db, $_POST['woonplaats']);
-		$straat = mysqli_real_escape_string($db, $_POST['straat']);
-		$straatnummer = mysqli_real_escape_string($db, $_POST['huisnummer']);
-		$toevoegsel = mysqli_real_escape_string($db, $_POST['toevoeging']);
-		$admin = 0;
+		$functie = mysqli_real_escape_string($db,$_POST['functie']);
 		
        	
  
@@ -47,10 +40,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
     } 
        else 
           { 
-		$query = ("INSERT INTO gebruiker (naam, tussenvoegsel, achternaam, emailadres, wachtwoord, postcode, woonplaats, straat, straatnummer, toevoegsel, admin)
-		VALUES('$naam','$tussenvoegsel','$achternaam','$email', '$wachtwoord', '$postcode', '$woonplaats', '$straat', '$straatnummer', '$toevoegsel', '$admin')") or die (mysqli_error());
+		$query = ("INSERT INTO gebruikers (idgebruikers, naam, wachtwoord, email, functies_idfuncties)
+		VALUES(1, '$naam', '$wachtwoord','$email','$functie')") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
-		echo("Uw account is aangemaakt!");
+		echo("Het account is aangemaakt!");
 		
 	}
 }
