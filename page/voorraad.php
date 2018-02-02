@@ -1,8 +1,8 @@
-<!-- HOME.PHP
+<!-- VOORRAAD.PHP
 
 FUNCTIES:
-- Weergeven van de producten
-- Mogelijk om te filteren via de sidebarcategorieën.
+- Weergeven van de voorraad
+
 
 -->
 <?php
