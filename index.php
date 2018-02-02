@@ -41,26 +41,67 @@ FUNCTIES:
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
+		  <!-- Homepagina -->
             <li class="nav-item active">
               <a class="nav-link" href="?page=home">Home
               </a>
             </li>
+			
+			
+			<!-- begin speciaal menu -->
             <?php 
 			session_start();
-			if(isset($_SESSION['naam'])){
+			if(isset($_SESSION["functie"])){
+				switch($_SESSION["functie"]){
+				case 0:
+				?>
 			
-			?> 
-			<li class="nav-item">
-              <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
-            </li>
-			
-			<li class="nav-item">
-              <a class="nav-link" href="?page=form_product">Product toevoegen</a>
-            </li>
-			
+			<!-- menu van functie-ID 0 (Employee) -->
 			<li class="nav-item">
               <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
             </li>
+			
+			<?php
+				break;
+				case 1: 
+				?>
+				
+			<!-- menu van functie-ID 1 (Department manager)-->
+			<li class="nav-item">
+            <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
+            </li>
+								
+			<?php	
+				break;
+				case 2: 
+				?>
+				
+			<!-- menu van functie-ID 2 (Purchasing department)-->	
+			<li class="nav-item">
+            <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="?page=form_product">Product toevoegen</a>
+            </li>
+			<?php 
+				break;
+				case 3:
+				?>
+			
+			<!-- menu van functie-ID 3 (Logistiek medewerker)-->
+			<li class="nav-item">
+            <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
+            </li>
+			<?php 
+				break;
+				
+				
+				}
+				
+			?> 
+			
+		
+		
 			
 			
 			<?php 
