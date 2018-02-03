@@ -1,9 +1,6 @@
 <?php
 include 'inc/db_connect.php';
-	$query = 	"SELECT * FROM facturen, producten, bestelregel
-				WHERE bestelregel.producten_idproducten = producten_idproducten AND
-				bestelregel.producten_idproducten = producten.idproducten 
-";
+	$query = 	"SELECT * FROM facturen, producten, bestelregel, gebruikers WHERE bestelregel.producten_idproducten = producten.idproducten AND facturen.gebruikers_idgebruikers = gebruikers.idgebruikers AND facturen.goedgekeurd = '0' AND bestelregel.facturen_idfacturen = facturen.idfacturen";
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
 	
 	
@@ -24,6 +21,8 @@ include 'inc/db_connect.php';
 	<th>Productnaam</th>
 	<th>Aantal</th>
 	<th>Totaalprijs</th>
+	<th>Akkoord?</th>
+	
   </tr>
   
   <?php
@@ -32,11 +31,13 @@ while($row = mysqli_fetch_assoc($result)){
 
   <tr>
     <td><?php echo $row['idfacturen'];?></td>
-	<td>naam</td>
-	<td><?php echo $row['naam'];?></td>
+	<td><?php echo $row['naam']; ?></td>
+	<td><?php echo $row['productnaam'];?></td>
 	<td><?php echo $row['aantal'];?></td>
 	<td>&euro; <?php echo $row['prijs'] * $row['aantal'];?>,00</td>
-	
+	<td>
+	<a href="?page=goedkeuren&factuur=<?php echo $row['idfacturen'];?>"><button>Akkoord</button></a>
+	</td>
 </tr>
 
 

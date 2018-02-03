@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
     } 
        else 
           { 
-		$query = ("INSERT INTO producten (naam, omschrijving, prijs, leverancier_idleverancier)
+		$query = ("INSERT INTO producten (productnaam, omschrijving, prijs, leverancier_idleverancier)
 		VALUES('$productnaam','$omschrijving','$prijs','$leverancier')") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
 		echo("Product is toegevoegd!");

@@ -59,7 +59,7 @@ while($row = mysqli_fetch_assoc($result)){
   <tr>
     <td><?php echo $row['idfacturen'];?></td>
 	<td><?php echo $row['datum'];?></td>
-	<td><?php echo $row['naam'];?></td>
+	<td><?php echo $row['productnaam'];?></td>
 	<td><?php echo $row['aantal'];?></td>
 	<td>&euro; <?php echo $row['prijs'] * $row['aantal'];?>,00</td>
 	
