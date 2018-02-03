@@ -48,6 +48,7 @@ FUNCTIES:
             </li>
 			
 			
+			
 			<!-- begin speciaal menu -->
             <?php 
 			session_start();
@@ -58,6 +59,10 @@ FUNCTIES:
 			
 			<!-- menu van functie-ID 0 (Employee) -->
 			<li class="nav-item">
+              <a class="nav-link" href="?page=form_bestellen">Bestellen
+              </a>
+            </li>
+			<li class="nav-item">
               <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
             </li>
 			
@@ -67,6 +72,10 @@ FUNCTIES:
 				?>
 				
 			<!-- menu van functie-ID 1 (Department manager)-->
+			<li class="nav-item">
+              <a class="nav-link" href="?page=form_bestellen">Bestellen
+              </a>
+            </li>
 			<li class="nav-item">
               <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
             </li>
@@ -84,7 +93,11 @@ FUNCTIES:
 				case 3: 
 				?>
 				
-			<!-- menu van functie-ID 2 (Purchasing department)-->	
+			<!-- menu van functie-ID 2 (Purchasing department)-->
+<li class="nav-item">
+              <a class="nav-link" href="?page=form_bestellen">Bestellen
+              </a>
+            </li>			
 			<li class="nav-item">
               <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
             </li>
@@ -104,6 +117,10 @@ FUNCTIES:
 				?>
 			
 			<!-- menu van functie-ID 3 (Logistiek medewerker)-->
+			<li class="nav-item">
+              <a class="nav-link" href="?page=form_bestellen">Bestellen
+              </a>
+            </li>
 			<li class="nav-item">
               <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
             </li>
