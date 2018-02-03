@@ -69,7 +69,7 @@ FUNCTIES:
 	<input class="btn btn-success" name="reset" type="reset" id="reset" value="Leegmaken">
 	</form>
 	<br>
-	<a href="?page=form_register">Maak een account aan</a>
+	
 	<?php 
 	}
 	?>
