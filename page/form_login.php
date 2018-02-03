@@ -13,9 +13,48 @@ FUNCTIES:
 	<?php
 	
 	if(isset($_SESSION["emailadres"])){
-	echo "Je bent ingelogd als: ". $_SESSION["naam"];
-	echo "<br><br><a class='btn btn-success' href='?page=uitloggen'>Uitloggen</a><br><br>";
+	?>
+	<table width="80%">
+	  <tr>
+		<td>Gebruiker:</td>
+		<td><?php echo $_SESSION["naam"]; ?></td>
+	  </tr>
+	  <tr>
+		<td>Functie: </td>
+	  
+	  <td>
+	<?php
 	
+	
+	
+	
+	switch($_SESSION["functie"]) {
+		case 0: 
+		echo "Employee";
+		break;
+		case 1: 
+		echo "Department manager";
+		break;
+		case 2: 
+		echo "Purchasing department";
+		break;
+		case 3:
+		echo "Logistic employee";
+		break;
+		case 4:
+		echo "Finance employee";
+		break;
+	}
+	?>
+	</td>
+	</tr>
+	</table>
+	<?php
+	echo "<br><a class='btn btn-success' href='?page=uitloggen'>Uitloggen</a><br><br>";
+	?>
+	
+	
+	<?php
 	}else{
 	?>
 	<form method="post" action="?page=login">
