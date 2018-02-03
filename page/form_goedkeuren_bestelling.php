@@ -1,3 +1,6 @@
+<?php 
+if(isset($_SESSION['naam'])){
+?>
 <?php
 include 'inc/db_connect.php';
 	$query = 	"SELECT * FROM facturen, producten, bestelregel, gebruikers WHERE bestelregel.producten_idproducten = producten.idproducten AND facturen.gebruikers_idgebruikers = gebruikers.idgebruikers AND facturen.goedgekeurd = '0' AND bestelregel.facturen_idfacturen = facturen.idfacturen";
@@ -52,3 +55,23 @@ while($row = mysqli_fetch_assoc($result)){
 				</div>
 	</div>
 </div>
+<?php
+
+}else{
+?>
+<div class="col-lg-9" >
+	<div class="card card-outline-secondary my-4">
+				<div class="card-header">
+				Niet ingelogd
+				</div>
+				<div class="card-body">
+				Je moet ingelogd zijn om deze pagina te kunnen bekijken!
+				
+				</div>
+	</div>			
+				 
+</div>
+<?php
+}
+
+?>

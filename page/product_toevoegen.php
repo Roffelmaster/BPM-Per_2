@@ -1,8 +1,9 @@
-<!-- REGISTER.PHP
+<?php 
+if(isset($_SESSION['naam'])){
+?><!-- product_toevoegen.PHP
 
 FUNCTIES:
-- Kunnen registreren van een account
-- Zorgen dat de gegevens van de producten in de database komen
+- 
 
 -->
 
@@ -43,7 +44,26 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
 ?>
 	
 	
-	
+	<?php
+
+}else{
+?>
+<div class="col-lg-9" >
+	<div class="card card-outline-secondary my-4">
+				<div class="card-header">
+				Niet ingelogd
+				</div>
+				<div class="card-body">
+				Je moet ingelogd zijn om deze pagina te kunnen bekijken!
+				
+				</div>
+	</div>			
+				 
+</div>
+<?php
+}
+
+?>
 	
 	
 	

@@ -25,55 +25,80 @@ tr:nth-child(even) {
 }
 </style>
 </head>
-<?php
-include 'inc/db_connect.php';
-	$query = 	"SELECT * FROM bestelregel, facturen, producten
-				WHERE gebruikers_idgebruikers = '" . $_SESSION['idgebruikers'] ."'
-				AND producten_idproducten = producten.idproducten AND bestelregel.facturen_idfacturen = facturen.idfacturen;";
-	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
-	
-	
+<?php 
+if(isset($_SESSION['naam'])){
+
 ?>
-<div class="col-lg-9">
+
+	<?php
+	include 'inc/db_connect.php';
+		$query = 	"SELECT * FROM bestelregel, facturen, producten
+					WHERE gebruikers_idgebruikers = '" . $_SESSION['idgebruikers'] ."'
+					AND producten_idproducten = producten.idproducten AND bestelregel.facturen_idfacturen = facturen.idfacturen;";
+		$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
+		
+		
+	?>
+	<div class="col-lg-9">
+		<div class="card card-outline-secondary my-4">
+					<div class="card-header">
+					  Overzicht bestelde producten
+					</div>
+					<div class="card-body">
+					
+
+
+	<table width="100%">
+	  <tr>
+		<th>BestelID</th>
+		<th>Besteldatum</th>
+		<th>Productnaam</th>
+		<th>Aantal</th>
+		<th>Totaalprijs</th>
+	  </tr>
+	  
+	  <?php
+	while($row = mysqli_fetch_assoc($result)){
+	?>
+
+	  <tr>
+		<td><?php echo $row['idfacturen'];?></td>
+		<td><?php echo $row['datum'];?></td>
+		<td><?php echo $row['productnaam'];?></td>
+		<td><?php echo $row['aantal'];?></td>
+		<td>&euro; <?php echo $row['prijs'] * $row['aantal'];?>,00</td>
+		
+	</tr>
+
+
+	<?php
+
+	}
+
+	?>
+
+	</table>
+	 
+					</div>
+		</div>
+	</div>	
+<?php
+
+}else{
+?> 
+<div class="col-lg-9" >
 	<div class="card card-outline-secondary my-4">
 				<div class="card-header">
-				  Overzicht bestelde producten
+				Niet ingelogd
 				</div>
 				<div class="card-body">
+				Je moet ingelogd zijn om deze pagina te kunnen bekijken!
 				
-
-
-<table width="100%">
-  <tr>
-    <th>BestelID</th>
-    <th>Besteldatum</th>
-	<th>Productnaam</th>
-	<th>Aantal</th>
-	<th>Totaalprijs</th>
-  </tr>
-  
-  <?php
-while($row = mysqli_fetch_assoc($result)){
-?>
-
-  <tr>
-    <td><?php echo $row['idfacturen'];?></td>
-	<td><?php echo $row['datum'];?></td>
-	<td><?php echo $row['productnaam'];?></td>
-	<td><?php echo $row['aantal'];?></td>
-	<td>&euro; <?php echo $row['prijs'] * $row['aantal'];?>,00</td>
-	
-</tr>
-
-
+				</div>
+	</div>			
+				 
+</div>
 <?php
-
 }
 
 ?>
-
-</table>
- 
-				</div>
-	</div>
-</div>	

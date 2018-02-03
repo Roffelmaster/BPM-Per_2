@@ -1,4 +1,6 @@
-<?php
+<?php 
+if(isset($_SESSION['naam'])){
+?><?php
 
 include 'inc/db_connect.php';
 
@@ -84,3 +86,24 @@ include 'inc/db_connect.php';
 				</div>
 	</div>
 </div>	
+
+<?php
+
+}else{
+?>
+<div class="col-lg-9" >
+	<div class="card card-outline-secondary my-4">
+				<div class="card-header">
+				Niet ingelogd
+				</div>
+				<div class="card-body">
+				Je moet ingelogd zijn om deze pagina te kunnen bekijken!
+				
+				</div>
+	</div>			
+				 
+</div>
+<?php
+}
+
+?>

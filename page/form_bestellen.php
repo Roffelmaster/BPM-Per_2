@@ -1,3 +1,6 @@
+<?php 
+if(isset($_SESSION['naam'])){
+?>
 <?php
 include 'inc/db_connect.php';
 	$query = 	"SELECT * FROM producten, leverancier WHERE producten.leverancier_idleverancier = leverancier.idleverancier";
@@ -90,3 +93,23 @@ while($row = mysqli_fetch_assoc($result)){
 				</div>
 	</div>
 </div>	
+<?php
+
+}else{
+?>
+<div class="col-lg-9" >
+	<div class="card card-outline-secondary my-4">
+				<div class="card-header">
+				Niet ingelogd
+				</div>
+				<div class="card-body">
+				Je moet ingelogd zijn om deze pagina te kunnen bekijken!
+				
+				</div>
+	</div>			
+				 
+</div>
+<?php
+}
+
+?>

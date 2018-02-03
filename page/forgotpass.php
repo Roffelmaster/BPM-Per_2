@@ -1,3 +1,4 @@
+
 <!-- FORGOTPASS.PHP
 
 FUNCTIES:
@@ -14,7 +15,7 @@ if (!empty($_POST)){
 	$email1 = mysqli_real_escape_string($db, $_POST['email']);
 	
 	// query samenstellen en uitvoeren
-	$query = "SELECT * FROM gebruiker WHERE emailadres='$email1';";
+	$query = "SELECT * FROM gebruikers WHERE email='$email1';";
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysql_error()); 
 	
 	// controleren of mail-adres is gevonden
@@ -22,7 +23,7 @@ if (!empty($_POST)){
 		// JA: variabelen toekennen
 		while($row = mysqli_fetch_assoc($result)){
 			
-			$email = $row['emailadres'];
+			$email = $row['email'];
 			$wachtwoord = $row['wachtwoord'];
 		}
 		

@@ -147,6 +147,10 @@ FUNCTIES:
 			<li class="nav-item">
             <a class="nav-link" href="?page=openstaande_facturen">Openstaande facturen</a>
             </li>		
+			
+			<li class="nav-item">
+            <a class="nav-link" href="?page=betaalde_facturen">Betaalde facturen</a>
+            </li>	
 				<?php
 				break;
 				}
