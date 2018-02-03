@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 03 feb 2018 om 14:29
+-- Gegenereerd op: 03 feb 2018 om 14:39
 -- Serverversie: 10.1.26-MariaDB
 -- PHP-versie: 7.1.9
 
@@ -160,7 +160,7 @@ INSERT INTO `magazijn` (`idmagazijn`, `naam`, `hoeveelheid`, `producten_idproduc
 
 CREATE TABLE `producten` (
   `idproducten` int(11) NOT NULL,
-  `naam` varchar(45) NOT NULL,
+  `productnaam` varchar(45) NOT NULL,
   `omschrijving` longtext NOT NULL,
   `prijs` decimal(10,0) DEFAULT NULL,
   `leverancier_idleverancier` int(11) NOT NULL
@@ -170,7 +170,7 @@ CREATE TABLE `producten` (
 -- Gegevens worden geëxporteerd voor tabel `producten`
 --
 
-INSERT INTO `producten` (`idproducten`, `naam`, `omschrijving`, `prijs`, `leverancier_idleverancier`) VALUES
+INSERT INTO `producten` (`idproducten`, `productnaam`, `omschrijving`, `prijs`, `leverancier_idleverancier`) VALUES
 (1, 'Corsair toetsenbord', 'QWERTY toetsenbord', '55', 1),
 (2, 'Shark Force muis', 'Muis met DPI switch', '15', 2),
 (3, 'Philips headset', 'Headset met microfoon. ', '22', 3);
