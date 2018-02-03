@@ -34,7 +34,7 @@ FUNCTIES:
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
       <div class="container">
-         <a class="navbar-brand" href="?page=home"><img src="img/logo.png"></a>
+         <a class="navbar-brand" href="?page=home">
 		<a class="navbar-brand" href="?page=home">IT Solutions</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -68,6 +68,10 @@ FUNCTIES:
 				
 			<!-- menu van functie-ID 1 (Department manager)-->
 			<li class="nav-item">
+              <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
+            </li>
+			
+			<li class="nav-item">
             <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
             </li>
 								
@@ -77,6 +81,10 @@ FUNCTIES:
 				?>
 				
 			<!-- menu van functie-ID 2 (Purchasing department)-->	
+			<li class="nav-item">
+              <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
+            </li>
+			
 			<li class="nav-item">
             <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
             </li>
@@ -92,6 +100,10 @@ FUNCTIES:
 				?>
 			
 			<!-- menu van functie-ID 3 (Logistiek medewerker)-->
+			<li class="nav-item">
+              <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
+            </li>
+			
 			<li class="nav-item">
             <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
             </li>
