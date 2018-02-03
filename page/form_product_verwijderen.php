@@ -7,17 +7,10 @@ FUNCTIES:
 
 -->
 
-<?php
-
-	if($_SESSION['admin'] == 0){
-	echo "je hebt hier geen rechten voor" ;
-	}else{
-
-	?>
 <div class="col-lg-9">
 	<div class="card card-outline-secondary my-4">
 				<div class="card-header">
-				  Contact Pagina
+				  Product verwijderen
 				</div>
 				<div class="card-body">
 
@@ -42,7 +35,3 @@ FUNCTIES:
 				</div>
 	</div>
 </div>
-<?php
-}
-
-?>
