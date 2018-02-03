@@ -53,7 +53,7 @@ FUNCTIES:
 			session_start();
 			if(isset($_SESSION["functie"])){
 				switch($_SESSION["functie"]){
-				case 0:
+				case 1:
 				?>
 			
 			<!-- menu van functie-ID 0 (Employee) -->
@@ -63,7 +63,7 @@ FUNCTIES:
 			
 			<?php
 				break;
-				case 1: 
+				case 2: 
 				?>
 				
 			<!-- menu van functie-ID 1 (Department manager)-->
@@ -73,7 +73,7 @@ FUNCTIES:
 								
 			<?php	
 				break;
-				case 2: 
+				case 3: 
 				?>
 				
 			<!-- menu van functie-ID 2 (Purchasing department)-->	
@@ -83,9 +83,12 @@ FUNCTIES:
 			<li class="nav-item">
               <a class="nav-link" href="?page=form_product">Product toevoegen</a>
             </li>
+			<li class="nav-item">
+            <a class="nav-link" href="?page=form_leverancier_toevoegen">Leverancier toevoegen</a>
+            </li>
 			<?php 
 				break;
-				case 3:
+				case 4:
 				?>
 			
 			<!-- menu van functie-ID 3 (Logistiek medewerker)-->

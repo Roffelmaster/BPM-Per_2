@@ -29,19 +29,19 @@ FUNCTIES:
 	
 	
 	switch($_SESSION["functie"]) {
-		case 0: 
+		case 1: 
 		echo "Employee";
 		break;
-		case 1: 
+		case 2: 
 		echo "Department manager";
 		break;
-		case 2: 
+		case 3: 
 		echo "Purchasing department";
 		break;
-		case 3:
+		case 4:
 		echo "Logistic employee";
 		break;
-		case 4:
+		case 5:
 		echo "Finance employee";
 		break;
 	}
