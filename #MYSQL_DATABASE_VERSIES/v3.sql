@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 03 feb 2018 om 14:05
+-- Gegenereerd op: 03 feb 2018 om 14:19
 -- Serverversie: 10.1.26-MariaDB
 -- PHP-versie: 7.1.9
 
@@ -51,7 +51,6 @@ INSERT INTO `bestelregel` (`idbestelregel`, `aantal`, `facturen_idfacturen`, `pr
 CREATE TABLE `facturen` (
   `idfacturen` int(11) NOT NULL,
   `datum` date NOT NULL,
-  `prijs` decimal(10,0) NOT NULL,
   `gebruikers_idgebruikers` int(11) NOT NULL,
   `functies_idfuncties` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -60,8 +59,8 @@ CREATE TABLE `facturen` (
 -- Gegevens worden geëxporteerd voor tabel `facturen`
 --
 
-INSERT INTO `facturen` (`idfacturen`, `datum`, `prijs`, `gebruikers_idgebruikers`, `functies_idfuncties`) VALUES
-(1, '2018-02-03', '500', 1, 1);
+INSERT INTO `facturen` (`idfacturen`, `datum`, `gebruikers_idgebruikers`, `functies_idfuncties`) VALUES
+(1, '2018-02-03', 1, 1);
 
 -- --------------------------------------------------------
 

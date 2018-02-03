@@ -27,8 +27,9 @@ tr:nth-child(even) {
 </head>
 <?php
 include 'inc/db_connect.php';
-	$query = 	"SELECT * FROM facturen, producten 
-				WHERE gebruikers_idgebruikers = '" . $_SESSION['idgebruikers'] ."'";
+	$query = 	"SELECT * FROM bestelregel, facturen, producten
+				WHERE gebruikers_idgebruikers = '" . $_SESSION['idgebruikers'] ."'
+				AND producten_idproducten = producten.idproducten;";
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
 	
 	
@@ -47,6 +48,7 @@ include 'inc/db_connect.php';
     <th>BestelID</th>
     <th>Besteldatum</th>
 	<th>Productnaam</th>
+	<th>Aantal</th>
 	<th>Totaalprijs</th>
   </tr>
   
@@ -58,7 +60,8 @@ while($row = mysqli_fetch_assoc($result)){
     <td><?php echo $row['idfacturen'];?></td>
 	<td><?php echo $row['datum'];?></td>
 	<td><?php echo $row['naam'];?></td>
-	<td>&euro; <?php echo $row['prijs'];?>,00</td>
+	<td><?php echo $row['aantal'];?></td>
+	<td>&euro; <?php echo $row['prijs'] * $row['aantal'];?>,00</td>
 	
 </tr>
 
