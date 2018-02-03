@@ -8,10 +8,10 @@ FUNCTIES:
 <div class="col-lg-9">
 	<div class="card card-outline-secondary my-4">
 				<div class="card-header">
-				  Homepagina
+				  Welkom terug, <?php echo $_SESSION["naam"]; ?>!
 				</div>
 				<div class="card-body">
-				 Welkom!
+				 
 				</div>
 	</div>
 </div>	

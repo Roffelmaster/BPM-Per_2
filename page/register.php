@@ -26,7 +26,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
       		$error_msg.="<li>Vul een geldig e-mail adres in.</li>";
       	}
       	
-      	$query1 = "SELECT * FROM gebruiker WHERE emailadres ='$email';";
+      	$query1 = "SELECT * FROM gebruikers WHERE email ='$email';";
 		$result1 = mysqli_query($db, $query1) or die ("FOUT: " . mysqli_error());
 		if (mysqli_num_rows($result1) > 0) {
 		// e-mailadres al aanwezig in de database, foutmelding tonen
@@ -40,8 +40,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
     } 
        else 
           { 
-		$query = ("INSERT INTO gebruikers (idgebruikers, naam, wachtwoord, email, functies_idfuncties)
-		VALUES(1, '$naam', '$wachtwoord','$email','$functie')") or die (mysqli_error());
+		$query = ("
+		INSERT INTO gebruikers (naam, wachtwoord, email, functies_idfuncties) 
+		VALUES('$naam', '$wachtwoord', '$email', '$functie')") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
 		echo("Het account is aangemaakt!");
 		
