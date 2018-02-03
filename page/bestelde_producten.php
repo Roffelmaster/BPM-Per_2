@@ -29,7 +29,7 @@ tr:nth-child(even) {
 include 'inc/db_connect.php';
 	$query = 	"SELECT * FROM bestelregel, facturen, producten
 				WHERE gebruikers_idgebruikers = '" . $_SESSION['idgebruikers'] ."'
-				AND producten_idproducten = producten.idproducten;";
+				AND producten_idproducten = producten.idproducten AND bestelregel.facturen_idfacturen = facturen.idfacturen;";
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
 	
 	

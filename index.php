@@ -130,8 +130,25 @@ FUNCTIES:
             </li>
 			<?php 
 				break;
-				
-				
+				case 5:
+				?>
+			<li class="nav-item">
+              <a class="nav-link" href="?page=form_bestellen">Bestellen
+              </a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
+            </li>
+			
+			<li class="nav-item">
+            <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
+            </li>
+
+			<li class="nav-item">
+            <a class="nav-link" href="?page=openstaande_facturen">Openstaande facturen</a>
+            </li>		
+				<?php
+				break;
 				}
 				
 			?> 
