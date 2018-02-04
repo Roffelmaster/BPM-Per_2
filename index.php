@@ -106,7 +106,7 @@ FUNCTIES:
             <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link" href="?page=form_product">Producten</a>
+              <a class="nav-link" href="?page=overzicht_producten_">Producten</a>
             </li>
 			<li class="nav-item">
             <a class="nav-link" href="?page=overzicht_leverancier">Leveranciers</a>

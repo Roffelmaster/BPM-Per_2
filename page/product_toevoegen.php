@@ -23,6 +23,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
 		VALUES('".$productnaam."','".$omschrijving."','".$prijs."','".$leverancier."')") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
 		echo("Product is toegevoegd!");
+		header('refresh: 2; URL=?page=overzicht_producten_');
 		
 		
 	}
