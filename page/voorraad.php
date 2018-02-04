@@ -12,7 +12,7 @@ include 'inc/db_connect.php';
 
 
 	
-	$query = 	"SELECT * FROM magazijn";
+	$query = 	"SELECT * FROM magazijn, producten WHERE magazijn.producten_idproducten = producten.idproducten";
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
 	
 	
@@ -64,7 +64,7 @@ while($row = mysqli_fetch_assoc($result)){
 
   <tr>
     <td><?php echo $row['idmagazijn'];?></td>
-	<td><?php echo $row['naam'];?></td>
+	<td><?php echo $row['productnaam'];?></td>
 	<td><?php echo $row['hoeveelheid'];?></td>
 	<td><?php echo $row['producten_idproducten'];?></td>
 	
@@ -82,7 +82,16 @@ while($row = mysqli_fetch_assoc($result)){
 </div>
 </div>							 
 </div>
+<?php
+include 'inc/db_connect.php';
 
+
+	
+	$query = 	"SELECT * FROM producten";
+	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
+	
+	
+?>
 
 <div class="col-lg-9" style="margin-left: 252px;">
 	<div class="card card-outline-secondary my-4">
@@ -97,8 +106,20 @@ while($row = mysqli_fetch_assoc($result)){
 	<fieldset>
 		<legend></legend>
 		<table>
-			<tr><td>Productnaam:</td><td>			<input name="naam" type="text" size="40" maxlength="50" ></td></tr>
+			<tr><td>Productnaam:</td><td>			<select name="idproducten" form="form1">
+			<?php
+				while($row = mysqli_fetch_assoc($result)){
+				?>
+				<option value="<?php echo $row['idproducten'];?>"><?php echo $row['productnaam'];?></option>
+				
+				<?php 
+				}
+				?>
+			</select></td></tr>
 			<tr><td>Hoeveelheid</td><td>	<input name="prijs" type="number" size="40" maxlength="25" ></td></tr>
+			
+			
+			</td>
 		</table>
 	</fieldset>
 

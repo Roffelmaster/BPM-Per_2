@@ -14,12 +14,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
   { 
 	
 		$error_msg = "";
-       	$productnaam = $_POST['naam'];
+       	
 		$hoeveelheid = $_POST['prijs'];
+		$idproducten = $_POST['idproducten'];
 		
 
-		$query = ("INSERT INTO magazijn (productnaam, hoeveelheid, producten_idproducten)
-		VALUES('".$productnaam."','".$hoeveelheid."')") or die (mysqli_error());
+		$query = ("INSERT INTO magazijn (hoeveelheid, producten_idproducten)
+		VALUES('".$hoeveelheid."','".$idproducten."')") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
 		echo("Product is ingeboekt!");
 		header('refresh: 2; URL=?page=voorraad');
