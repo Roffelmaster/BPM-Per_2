@@ -73,6 +73,8 @@ if(isset($_SESSION['naam'])){
 		echo "Goedgekeurd";
 		}elseif($row['goedgekeurd'] == 2){
 		echo "Afgekeurd";
+		}elseif($row['goedgekeurd'] == 3){
+		echo "Verzonden";
 		}else{
 		echo "Wacht op keuren";
 		}
