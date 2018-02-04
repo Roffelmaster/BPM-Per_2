@@ -40,6 +40,7 @@ while($row = mysqli_fetch_assoc($result)){
 	<td>&euro; <?php echo $row['prijs'] * $row['aantal'];?>,00</td>
 	<td>
 	<a href="?page=goedkeuren&factuur=<?php echo $row['idfacturen'];?>"><button>Akkoord</button></a>
+	<a href="?page=afkeuren&factuur=<?php echo $row['idfacturen'];?>"><button>Afkeuren</button></a>
 	</td>
 </tr>
 

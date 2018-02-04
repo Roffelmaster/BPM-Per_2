@@ -55,6 +55,7 @@ if(isset($_SESSION['naam'])){
 		<th>Productnaam</th>
 		<th>Aantal</th>
 		<th>Totaalprijs</th>
+		<th>Status</th>
 	  </tr>
 	  
 	  <?php
@@ -67,6 +68,17 @@ if(isset($_SESSION['naam'])){
 		<td><?php echo $row['productnaam'];?></td>
 		<td><?php echo $row['aantal'];?></td>
 		<td>&euro; <?php echo $row['prijs'] * $row['aantal'];?>,00</td>
+		<td><?php 
+		if($row['goedgekeurd'] == 1){
+		echo "Goedgekeurd";
+		}elseif($row['goedgekeurd'] == 2){
+		echo "Afgekeurd";
+		}else{
+		echo "Wacht op keuren";
+		}
+		?>
+		
+		</td>
 		
 	</tr>
 
