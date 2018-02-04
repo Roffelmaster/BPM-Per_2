@@ -99,17 +99,17 @@ FUNCTIES:
               </a>
             </li>			
 			<li class="nav-item">
-              <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
+              <a class="nav-link" href="?page=bestelde_producten">Bestelde producten</a>
             </li>
 			
 			<li class="nav-item">
             <a class="nav-link" href="?page=form_register">Werknemer registeren</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link" href="?page=form_product">Product toevoegen</a>
+              <a class="nav-link" href="?page=form_product">Producten</a>
             </li>
 			<li class="nav-item">
-            <a class="nav-link" href="?page=form_leverancier_toevoegen">Leverancier toevoegen</a>
+            <a class="nav-link" href="?page=overzicht_leverancier">Leveranciers</a>
             </li>
 			<?php 
 				break;
@@ -201,14 +201,12 @@ FUNCTIES:
 
     <!-- Footer -->
     <footer class="py-5 bg-dark">
-      <div class="container">
-
-
-
-
-
+      <div class="container" style="color: white;">
+		
+		
+		
         <p class="m-0 text-center text-white">Copyright &copy; IT Solutions (2018)</p>
-
+		
 
       </div>
       <!-- /.container -->

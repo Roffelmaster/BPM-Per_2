@@ -15,6 +15,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && !empty($_POST))
 		VALUES('$naam', '$adres', '$telefoonnummer')") or die (mysqli_error());
 		$result = mysqli_query($db, $query);
 		echo("Leverancier toegevoegd");
+		header('refresh: 2; URL=?page=overzicht_leverancier');
 		}
 ?>		
 		<?php

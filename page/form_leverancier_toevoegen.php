@@ -35,7 +35,7 @@ FUNCTIES:
 	<br>
 
 
-		<input type="submit" name="submit" value="Product toevoegen">
+		<input type="submit" name="submit" value="Leverancier toevoegen">
 		<input name="reset" type="reset" value="Leegmaken">
 	</form>
 
