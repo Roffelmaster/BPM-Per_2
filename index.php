@@ -124,6 +124,9 @@ FUNCTIES:
 			<li class="nav-item">
               <a class="nav-link" href="?page=bestelde_producten">Overzicht bestelde producten</a>
             </li>
+			<li class="nav-item">
+              <a class="nav-link" href="?page=voorraad">Voorraad</a>
+            </li>
 			
 			<?php 
 				break;

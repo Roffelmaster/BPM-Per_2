@@ -51,7 +51,7 @@ if(isset($_SESSION['naam'])){
 				
 			// bericht naar gebruiker	
 				echo "bestelling is geplaatst en is minder dan &euro; 500,-.";
-			
+			header('refresh: 2; URL=?page=form_bestellen');
 			
 			}
 ?>
