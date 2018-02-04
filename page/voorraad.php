@@ -142,7 +142,7 @@ include 'inc/db_connect.php';
 	
 	$query = 	"SELECT * FROM facturen, bestelregel, producten 
 	WHERE facturen.idfacturen = bestelregel.facturen_idfacturen 
-	AND bestelregel.producten_idproducten = producten.idproducten";
+	AND bestelregel.producten_idproducten = producten.idproducten AND facturen.goedgekeurd = '1'";
 	$result = mysqli_query($db, $query) or die("FOUT : " . mysqli_error());	
 	
 	
