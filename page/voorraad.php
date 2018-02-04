@@ -26,7 +26,7 @@ include 'inc/db_connect.php';
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
-    width: 50%;
+    width: 100%;
 	padding-left: 100px;
 }
 
@@ -44,8 +44,13 @@ tr:nth-child(even) {
 <body>
 
 
-
-<table>
+<div class="col-lg-9" >
+	<div class="card card-outline-secondary my-4">
+				<div class="card-header">
+				Huidige Voorraad
+				</div>
+				<div class="card-body">
+				<table>
   <tr>
     <th>ID</th>
     <th>Naam</th>
@@ -73,6 +78,41 @@ while($row = mysqli_fetch_assoc($result)){
 ?>
 
 </table>
+				
+</div>
+</div>							 
+</div>
+
+
+<div class="col-lg-9" style="margin-left: 252px;">
+	<div class="card card-outline-secondary my-4">
+				<div class="card-header">
+				 Product toevoegen
+				
+				</div>
+				<div class="card-body">
+
+
+	<form method="post" action="?page=product_inboeken" id="form1">
+	<fieldset>
+		<legend></legend>
+		<table>
+			<tr><td>Productnaam:</td><td>			<input name="naam" type="text" size="40" maxlength="50" ></td></tr>
+			<tr><td>Hoeveelheid</td><td>	<input name="prijs" type="number" size="40" maxlength="25" ></td></tr>
+		</table>
+	</fieldset>
+
+	<br>
+
+
+		<input type="submit" name="submit" value="Product toevoegen">
+		<input name="reset" type="reset" value="Leegmaken">
+	</form>
+
+				</div>
+	</div>
+</div>
+
 
 </body>
 </html>
